@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./image/favicon.png">
+
+    <title>Calc Científica</title>
+</head>
+<body>
+    <div class="conteiner-calc">
+        <div class="row cabecalho">
+            <div class="col-md-9">
+                <h3>Científica</h3>
+            </div>
+            <div class="col-md-1" id="historico">
+                <h4>Histórico</h4>
+            </div>
+            <div class="col-md-1" id="memoria">
+                <h4>Memória</h4>
+            </div>
+            <div class="col-md-1" id="espaco"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+                <div class="resultado2">
+                    <p id="valor2"></p>
+                </div>
+                <div class="resultado1">
+                    <h1 id="valor1">0</h1>
+                </div>
+                <div class="row">
+                    <div class="col-1 function-1" id="deg">
+                        <span>DEG</span>
+                    </div>
+                    <div class="col-1 function-1" id="hyp">
+                        <span>HYP</span>
+                    </div>
+                    <div class="col-1 function-1" id="fe">
+                        <span>F-E</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 function-2" id="mc">
+                        <span>MC</span>
+                    </div>
+                    <div class="col-1 function-2" id="mr">
+                        <span>MR</span>
+                    </div>
+                    <div class="col-1 function-2" id="mMais">
+                        <span>M+</span>
+                    </div>
+                    <div class="col-1 function-2" id="mMenos">
+                        <span>M-</span>
+                    </div>
+                    <div class="col-1 function-2" id="ms">
+                        <span>MS</span>
+                    </div>
+                </div>
+                <div class="row linha-funcao-1">
+                    <div class="col" id="xquad">
+                        <span>x<sup>2</sup></span>
+                    </div>
+                    <div class="col" id="xelevadoy">
+                        <span>x<sup>y</sup></span>
+                    </div>
+                    <div class="col" id="seno">
+                        <span>sin</span>
+                    </div>
+                    <div class="col" id="cosseno">
+                        <span>cos</span>
+                    </div>
+                    <div class="col" id="tangente">
+                        <span>tan</span>
+                    </div>
+                    <div class="col" id="ce">
+                        <span>CE</span>
+                    </div>
+                    <div class="col" id="c">
+                        <span>C</span>
+                    </div>
+                    <div class="col" id="backspace">
+                        <span><img src="./image/apagar.png"></span>
+                    </div>
+                    <div class="col" id="dividir">
+                        <span>÷</span>
+                    </div>
+                </div>
+                <div class="row linha-funcao-2">
+                    <div class="col" id="xcube">
+                        <span>x<sup>3</sup></span>
+                    </div>
+                    <div class="col" id="yraiz">
+                        <span><sup>y</sup>&radic;x</span>
+                    </div>
+                    <div class="col" id="seno1">
+                        <span>sin<sup>-1</sup></span>
+                    </div>
+                    <div class="col" id="cosseno1">
+                        <span>cos<sup>-1</sup></span>
+                    </div>
+                    <div class="col" id="tangente1">
+                        <span>tan<sup>-1</sup></span>
+                    </div>
+                    <div class="col" id="7">
+                        <span>7</span>
+                    </div>
+                    <div class="col" id="8">
+                        <span>8</span>
+                    </div>
+                    <div class="col" id="9">
+                        <span>9</span>
+                    </div>
+                    <div class="col" id="multiplicar">
+                        <span>×</span>
+                    </div>
+                </div>
+                <div class="row linha-funcao-3">
+                    <div class="col" id="raiz">
+                        <span>&radic;</span>
+                    </div>
+                    <div class="col" id="dezElevx">
+                        <span>10<sup>x</sup></span>
+                    </div>
+                    <div class="col" id="log">
+                        <span>log</span>
+                    </div>
+                    <div class="col" id="exp">
+                        <span>Exp</span>
+                    </div>
+                    <div class="col" id="mod">
+                        <span>Mod</span>
+                    </div>
+                    <div class="col" id="4">
+                        <span>4</span>
+                    </div>
+                    <div class="col" id="5">
+                        <span>5</span>
+                    </div>
+                    <div class="col" id="6">
+                        <span>6</span>
+                    </div>
+                    <div class="col" id="subtrair">
+                        <span>-</span>
+                    </div>
+                </div>
+                <div class="row linha-funcao-4">
+                    <div class="col" id="inverso">
+                        <span><sup>1</sup>/x</span>
+                    </div>
+                    <div class="col" id="exponecial">
+                        <span>e<sup>x</sup></span>
+                    </div>
+                    <div class="col" id="ln">
+                        <span>ln</span>
+                    </div>
+                    <div class="col" id="dms">
+                        <span>dms</span>
+                    </div>
+                    <div class="col" id="deg1">
+                        <span>deg</span>
+                    </div>
+                    <div class="col" id="1">
+                        <span>1</span>
+                    </div>
+                    <div class="col" id="2">
+                        <span>2</span>
+                    </div>
+                    <div class="col" id="3">
+                        <span>3</span>
+                    </div>
+                    <div class="col" id="somar">
+                        <span>+</span>
+                    </div>
+                </div>
+                <div class="row linha-funcao-5">
+                    <div class="col" id="shift">
+                        <span>&UpArrow;</span>
+                    </div>
+                    <div class="col" id="pi">
+                        <span>&pi;</span>
+                    </div>
+                    <div class="col" id="fatorial">
+                        <span>n!</span>
+                    </div>
+                    <div class="col" id="aParentese">
+                        <span>(</span>
+                    </div>
+                    <div class="col" id="fParentese">
+                        <span>)</span>
+                    </div>
+                    <div class="col" id="maisOuMenos">
+                        <span>±</span>
+                    </div>
+                    <div class="col" id="0">
+                        <span>0</span>
+                    </div>
+                    <div class="col" id="virg">
+                        <span>,</span>
+                    </div>
+                    <div class="col" id="igual">
+                        <span>=</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <!--INÍCIO DO SCRIPT-->
+    <script src="./script.js"></script>
+    <!--FIM DO SCRIPT-->
+</body>
+</html>
